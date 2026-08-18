@@ -30,7 +30,7 @@
     "@x402/express": "2.21.0",
     "@x402/fetch": "2.21.0",
     "express": "^5.1.0",
-    "viem": "^2.31.0",
+    "viem": "^2.55.16",
     "zod": "^4.0.5"
   },
   "devDependencies": {
