@@ -8,7 +8,19 @@ updates:
     # bump is checked against the payment tests by hand.
     ignore:
       - dependency-name: "@x402/*"
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"
