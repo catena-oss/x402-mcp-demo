@@ -25,7 +25,7 @@ jobs:
       # pnpm version comes from the "packageManager" field in package.json;
       # passing it here too makes pnpm/action-setup error on a version clash.
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
