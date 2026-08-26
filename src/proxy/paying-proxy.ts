@@ -23,7 +23,7 @@ const USDC_BASE_SEPOLIA = "0x036cbd53842c5426634e7929541ec2318f3dcf7e"
 export interface ProxyOptions {
   upstreamUrl: string
   evmPrivateKey: `0x${string}`
-  /** Total the proxy may spend across its lifetime, e.g. "$0.01". */
+  /** Total the proxy may spend across its lifetime, e.g. "$0.10". */
   spendCapUsd: string
   /** Only challenges on this network are signed. Narrowed to the one
    * network the USDC pin above is true for: any other value would price

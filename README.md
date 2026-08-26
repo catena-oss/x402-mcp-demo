@@ -62,7 +62,7 @@ pnpm demo
 
 Boots the paid server against the public x402 facilitator, drives a standard
 MCP client through the paying proxy, and prints: free discovery, then the
-paid tool call settling $0.001 of testnet USDC into the Catena deposit
+paid tool call settling $0.02 of testnet USDC into the Catena deposit
 address.
 
 ## See the 402 yourself
@@ -76,7 +76,7 @@ curl -s http://localhost:4040/healthz
 ```
 
 ```
-{"status":"ok","paidTool":"premium_market_signal","price":"$0.001"}
+{"status":"ok","paidTool":"premium_market_signal","price":"$0.02"}
 ```
 
 The challenge itself travels in the `PAYMENT-REQUIRED` response header, not
@@ -91,7 +91,7 @@ curl -si -X POST http://localhost:4040/mcp \
 ```
 
 ```
-{"x402Version":2,"error":"Payment required","resource":{"url":"http://localhost:4040/mcp","description":"One invocation of the premium_market_signal MCP tool","mimeType":""},"accepts":[{"scheme":"exact","network":"eip155:84532","amount":"1000","asset":"0x036CbD53842c5426634e7929541eC2318f3dCF7e","payTo":"0x000000000000000000000000000000000000dEaD","maxTimeoutSeconds":300,"extra":{"name":"USDC","version":"2"}}]}
+{"x402Version":2,"error":"Payment required","resource":{"url":"http://localhost:4040/mcp","description":"One invocation of the premium_market_signal MCP tool","mimeType":""},"accepts":[{"scheme":"exact","network":"eip155:84532","amount":"20000","asset":"0x036CbD53842c5426634e7929541eC2318f3dCF7e","payTo":"0x000000000000000000000000000000000000dEaD","maxTimeoutSeconds":300,"extra":{"name":"USDC","version":"2"}}]}
 ```
 
 Drop `| grep ...` to see the status line: `HTTP/1.1 402 Payment Required`.
