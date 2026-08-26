@@ -14,7 +14,7 @@ export const PAID_TOOL = "premium_market_signal"
 export interface PaidMcpServerOptions {
   /** Address receiving tool-call payments (Catena sandbox deposit address). */
   payTo: string
-  /** Price of one paid tool invocation, e.g. "$0.001". */
+  /** Price of one paid tool invocation, e.g. "$0.02". */
   price: string
   network: Network
   facilitatorClient: FacilitatorClient

@@ -41,7 +41,7 @@ const envSchema = z.object({
       .optional(),
   ),
   /** Price of one paid tool invocation. */
-  TOOL_PRICE_USD: usdAmount.default("$0.001"),
+  TOOL_PRICE_USD: usdAmount.default("$0.02"),
   X402_NETWORK: z.literal("eip155:84532").default("eip155:84532"),
   X402_FACILITATOR_URL: z.url().default("https://x402.org/facilitator"),
   /** Funded Base Sepolia key the paying proxy signs payments with. */
@@ -56,7 +56,7 @@ const envSchema = z.object({
   /** Upstream paid MCP server the proxy fronts. */
   UPSTREAM_MCP_URL: z.url().default("http://localhost:4040/mcp"),
   /** Total the proxy may spend across its lifetime. */
-  PROXY_SPEND_CAP_USD: usdAmount.default("$0.01"),
+  PROXY_SPEND_CAP_USD: usdAmount.default("$0.10"),
 })
 
 export type Config = z.infer<typeof envSchema>
