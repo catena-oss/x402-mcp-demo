@@ -30,8 +30,8 @@
     "@x402/express": "2.21.0",
     "@x402/fetch": "2.21.0",
     "express": "^5.1.0",
-    "viem": "^2.55.16",
-    "zod": "^4.0.5"
+    "viem": "^2.56.3",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -39,9 +39,9 @@
     "@types/node": "^22.15.0",
     "eslint": "^9.30.0",
     "prettier": "^3.9.5",
-    "tsx": "^4.23.12",
+    "tsx": "^4.23.13",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.67.0",
+    "typescript-eslint": "^8.69.0",
     "vitest": "^4.1.10"
   }
 }
