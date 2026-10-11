@@ -80,9 +80,11 @@ export async function startTestServer(price = "$0.001"): Promise<TestServer> {
     url: `http://localhost:${address.port}`,
     facilitator,
     close: () =>
-      new Promise((resolve) => {
-        server.close(() => {
-          resolve()
+      new Promise<void>((resolve, reject) => {
+        server.closeAllConnections()
+        server.close((err) => {
+          if (err) reject(err)
+          else resolve()
         })
       }),
   }

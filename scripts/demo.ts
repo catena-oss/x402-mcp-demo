@@ -100,5 +100,11 @@ try {
   }
 } finally {
   await client.close()
-  httpServer.close()
+  await new Promise<void>((resolve, reject) => {
+    httpServer.closeAllConnections()
+    httpServer.close((err) => {
+      if (err) reject(err)
+      else resolve()
+    })
+  })
 }
